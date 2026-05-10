@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+
+
+# environment variables
+.env
+
+# Virtual environments
+.venv/
+
+*.pyc
+*.pyo
+.pytest_cache/
+checkpoints.db
+audit_log.jsonl
+.DS_Store

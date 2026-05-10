@@ -1,0 +1,37 @@
+# Business rules for PO validation
+# Each rule has: description (human-readable), threshold(s), and severity_if_violated
+
+rules:
+  price_per_unit:
+    max_usd: 25.00
+    description: "Unit price must not exceed $25.00 USD"
+    severity_if_violated: "HIGH"
+
+  total_order_value:
+    max_usd: 50000.00
+    description: "Total PO value must not exceed $50,000 USD"
+    severity_if_violated: "HIGH"
+
+  approved_suppliers:
+    list:
+      - "ACME Corp"
+      - "GlobalParts Ltd"
+      - "FastShip Inc"
+    description: "Supplier must be on the approved vendor list"
+    severity_if_violated: "HIGH"
+
+  quantity_per_line:
+    max_units: 1000
+    description: "No single line item may exceed 1000 units"
+    severity_if_violated: "MEDIUM"
+
+  currency:
+    allowed:
+      - "USD"
+    description: "Only USD orders are accepted"
+    severity_if_violated: "HIGH"
+
+  lead_time:
+    max_days: 90
+    description: "Lead time must not exceed 90 days"
+    severity_if_violated: "MEDIUM"

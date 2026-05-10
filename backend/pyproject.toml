@@ -1,0 +1,46 @@
+[project]
+name = "logistics-ops-agent"
+version = "0.1.0"
+description = "Production-grade PO Anomaly Detection Agent using LangGraph"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "langgraph==1.1.0",
+    "langgraph-checkpoint-sqlite==3.0.3",
+
+    "langchain>=1.0.0,<2.0.0",
+    "langchain-core>=1.0.0,<2.0.0",
+    "langchain-openai>=1.0.0,<2.0.0",
+    "langchain-anthropic>=1.0.0,<2.0.0",
+
+    "langsmith>=0.4.0,<1.0.0",
+
+    "fastapi[standard]==0.136.1",
+    "uvicorn>=0.30.0",
+
+    "pydantic>=2.0.0,<3.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+asyncio_mode = "auto"
