@@ -12,7 +12,8 @@ def load_env() -> None:
     Load .env from project root.
     Safe to call multiple times — dotenv is idempotent.
     """
-    env_path = Path(__file__).parent.parent / ".env"
+    env_path = Path(__file__).parent / ".env"
     load_dotenv(dotenv_path=env_path, override=False)
+
     # override=False: real env vars (set in shell/CI) take precedence over .env
     # This means your production environment can override .env values safely
