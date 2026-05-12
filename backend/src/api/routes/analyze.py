@@ -117,7 +117,16 @@ async def analyze(
        - Interrupt present → return InterruptResponse with thread_id
     """
     thread_id = str(uuid.uuid4())
-    config = {"configurable": {"thread_id": thread_id}}
+    config = {
+    "configurable": {"thread_id": thread_id},
+    "metadata": {
+        "po_id": po_input.po_id,
+        "thread_id": thread_id,
+        "supplier": po_input.supplier_name,
+    },
+    "tags": ["po-analysis", f"supplier:{po_input.supplier_name}"],
+    "run_name": f"analyze:{po_input.po_id}",
+    }
     initial_state = build_initial_state(po_input)
 
     try:
@@ -201,7 +210,16 @@ async def resume(
             detail=f"decision must be 'approve' or 'reject', got: '{resume_request.decision}'"
         )
 
-    config = {"configurable": {"thread_id": thread_id}}
+    config = {
+    "configurable": {"thread_id": thread_id},
+    "metadata": {
+        "thread_id": thread_id,
+        "approver_id": resume_request.approver_id,
+        "decision": resume_request.decision,
+    },
+    "tags": ["po-resume", f"decision:{resume_request.decision}"],
+    "run_name": f"resume:{thread_id[:8]}",
+    }
     resume_payload = {
         "decision": resume_request.decision,
         "approver_id": resume_request.approver_id,

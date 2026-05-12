@@ -326,9 +326,11 @@ def persist_node(state: POAgentState) -> dict:
     # Attempt to capture LangSmith trace ID — graceful fallback if unavailable
     trace_id: str | None = None
     try:
-        from langsmith import get_current_run_tree
+        # from langsmith import 
+        from langsmith.run_helpers import get_current_run_tree
         run = get_current_run_tree()
-        trace_id = str(run.id) if run else None
+        # trace_id = str(run.id) if run else None
+        trace_id = str(run.trace_id) if run else None
     except Exception:
         pass  # Tracing is optional — never fail the graph over observability
 
