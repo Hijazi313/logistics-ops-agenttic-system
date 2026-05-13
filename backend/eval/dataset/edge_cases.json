@@ -1,0 +1,109 @@
+[
+  {
+    "po_id": "PO-2026-E001",
+    "supplier_name": "ACME Corp",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-E001",
+        "description": "Boundary Widget",
+        "quantity": 100,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 2500.0
+      }
+    ],
+    "total_value_usd": 2500.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-E002",
+    "supplier_name": "ACME Corp",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-E002",
+        "description": "Slightly Overpriced Widget",
+        "quantity": 100,
+        "unit_price_usd": 25.01,
+        "total_price_usd": 2501.0
+      }
+    ],
+    "total_value_usd": 2501.0,
+    "submitted_by": null,
+    "ground_truth_decision": "reject",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "price_per_unit"
+    ]
+  },
+  {
+    "po_id": "PO-2026-E003",
+    "supplier_name": "GlobalParts Ltd",
+    "currency": "USD",
+    "lead_time_days": 90,
+    "line_items": [
+      {
+        "sku": "SKU-E003",
+        "description": "Long Lead Part",
+        "quantity": 40,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 1000.0
+      }
+    ],
+    "total_value_usd": 1000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-E004",
+    "supplier_name": "GlobalParts Ltd",
+    "currency": "USD",
+    "lead_time_days": 91,
+    "line_items": [
+      {
+        "sku": "SKU-E004",
+        "description": "Over Lead Time Part",
+        "quantity": 40,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 1000.0
+      }
+    ],
+    "total_value_usd": 1000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "escalate",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "lead_time"
+    ]
+  },
+  {
+    "po_id": "PO-2026-E005",
+    "supplier_name": "FastShip Inc",
+    "currency": "USD",
+    "lead_time_days": 91,
+    "line_items": [
+      {
+        "sku": "SKU-E005",
+        "description": "High Volume Part",
+        "quantity": 1010,
+        "unit_price_usd": 5.0,
+        "total_price_usd": 5050.0
+      }
+    ],
+    "total_value_usd": 5050.0,
+    "submitted_by": null,
+    "ground_truth_decision": "escalate",
+    "ground_truth_violation_count": 2,
+    "ground_truth_rule_ids": [
+      "lead_time",
+      "quantity_per_line"
+    ]
+  }
+]

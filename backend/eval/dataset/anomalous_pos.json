@@ -1,0 +1,115 @@
+[
+  {
+    "po_id": "PO-2026-A001",
+    "supplier_name": "ShadyDeals Inc",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-A001",
+        "description": "Generic Part",
+        "quantity": 50,
+        "unit_price_usd": 20.0,
+        "total_price_usd": 1000.0
+      }
+    ],
+    "total_value_usd": 1000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "reject",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "approved_suppliers"
+    ]
+  },
+  {
+    "po_id": "PO-2026-A002",
+    "supplier_name": "ACME Corp",
+    "currency": "EUR",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-A002",
+        "description": "Electronic Module",
+        "quantity": 40,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 1000.0
+      }
+    ],
+    "total_value_usd": 1000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "reject",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "currency"
+    ]
+  },
+  {
+    "po_id": "PO-2026-A003",
+    "supplier_name": "ACME Corp",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-A003",
+        "description": "Premium Sensor",
+        "quantity": 100,
+        "unit_price_usd": 35.0,
+        "total_price_usd": 3500.0
+      }
+    ],
+    "total_value_usd": 3500.0,
+    "submitted_by": null,
+    "ground_truth_decision": "reject",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "price_per_unit"
+    ]
+  },
+  {
+    "po_id": "PO-2026-A004",
+    "supplier_name": "QuickSupply Co",
+    "currency": "USD",
+    "lead_time_days": 120,
+    "line_items": [
+      {
+        "sku": "SKU-A004",
+        "description": "Industrial Robot Arm",
+        "quantity": 50,
+        "unit_price_usd": 1500.0,
+        "total_price_usd": 75000.0
+      }
+    ],
+    "total_value_usd": 75000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "reject",
+    "ground_truth_violation_count": 4,
+    "ground_truth_rule_ids": [
+      "approved_suppliers",
+      "lead_time",
+      "total_order_value",
+      "price_per_unit"
+    ]
+  },
+  {
+    "po_id": "PO-2026-A005",
+    "supplier_name": "FastShip Inc",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-A005",
+        "description": "Bulk Connector",
+        "quantity": 1500,
+        "unit_price_usd": 3.33,
+        "total_price_usd": 4995.0
+      }
+    ],
+    "total_value_usd": 4995.0,
+    "submitted_by": null,
+    "ground_truth_decision": "escalate",
+    "ground_truth_violation_count": 1,
+    "ground_truth_rule_ids": [
+      "quantity_per_line"
+    ]
+  }
+]

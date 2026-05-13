@@ -1,0 +1,123 @@
+[
+  {
+    "po_id": "PO-2026-C001",
+    "supplier_name": "ACME Corp",
+    "currency": "USD",
+    "lead_time_days": 30,
+    "line_items": [
+      {
+        "sku": "SKU-C001",
+        "description": "Standard Widget",
+        "quantity": 50,
+        "unit_price_usd": 20.0,
+        "total_price_usd": 1000.0
+      }
+    ],
+    "total_value_usd": 1000.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-C002",
+    "supplier_name": "GlobalParts Ltd",
+    "currency": "USD",
+    "lead_time_days": 45,
+    "line_items": [
+      {
+        "sku": "SKU-C002",
+        "description": "Industrial Fastener",
+        "quantity": 800,
+        "unit_price_usd": 3.0,
+        "total_price_usd": 2400.0
+      }
+    ],
+    "total_value_usd": 2400.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-C003",
+    "supplier_name": "FastShip Inc",
+    "currency": "USD",
+    "lead_time_days": 14,
+    "line_items": [
+      {
+        "sku": "SKU-C003A",
+        "description": "Precision Gear",
+        "quantity": 200,
+        "unit_price_usd": 24.99,
+        "total_price_usd": 4998.0
+      },
+      {
+        "sku": "SKU-C003B",
+        "description": "Mounting Bracket",
+        "quantity": 500,
+        "unit_price_usd": 14.0,
+        "total_price_usd": 7000.0
+      },
+      {
+        "sku": "SKU-C003C",
+        "description": "Hex Bolt Set",
+        "quantity": 100,
+        "unit_price_usd": 2.02,
+        "total_price_usd": 202.0
+      }
+    ],
+    "total_value_usd": 12200.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-C004",
+    "supplier_name": "ACME Corp",
+    "currency": "USD",
+    "lead_time_days": 60,
+    "line_items": [
+      {
+        "sku": "SKU-C004",
+        "description": "Cable Assembly",
+        "quantity": 20,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 500.0
+      }
+    ],
+    "total_value_usd": 500.0,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  },
+  {
+    "po_id": "PO-2026-C005",
+    "supplier_name": "GlobalParts Ltd",
+    "currency": "USD",
+    "lead_time_days": 90,
+    "line_items": [
+      {
+        "sku": "SKU-C005A",
+        "description": "Hydraulic Pump",
+        "quantity": 999,
+        "unit_price_usd": 24.99,
+        "total_price_usd": 24965.01
+      },
+      {
+        "sku": "SKU-C005B",
+        "description": "Pressure Valve",
+        "quantity": 999,
+        "unit_price_usd": 25.0,
+        "total_price_usd": 24975.0
+      }
+    ],
+    "total_value_usd": 49940.01,
+    "submitted_by": null,
+    "ground_truth_decision": "approve",
+    "ground_truth_violation_count": 0,
+    "ground_truth_rule_ids": []
+  }
+]

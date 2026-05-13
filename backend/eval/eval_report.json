@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-05-13T19:19:38.225811+00:00",
+  "overall_accuracy": 1.0,
+  "clean_precision": 1.0,
+  "anomaly_recall": 1.0,
+  "edge_case_accuracy": 1.0,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "total": 15,
+  "correct": 15,
+  "failures": []
+}

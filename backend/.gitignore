@@ -20,3 +20,7 @@ wheels/
 checkpoints.db
 audit_log.jsonl
 .DS_Store
+
+
+checkpoints.db-shm
+checkpoints.db-wal

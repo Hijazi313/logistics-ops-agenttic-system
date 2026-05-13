@@ -48,13 +48,13 @@ class POInput(BaseModel):
     @classmethod
     def po_id_format(cls, v: str) -> str:
         """
-        Enforce PO ID format: PO-YYYY-NNNN
+        Enforce PO ID format: PO-YYYY-XXXX (where XXXX is alphanumeric)
         Deterministic validation at the boundary — not the LLM's job.
         """
         import re
-        if not re.match(r"^PO-\d{4}-\d{4}$", v):
+        if not re.match(r"^PO-\d{4}-[A-Z0-9]{4}$", v):
             raise ValueError(
-                f"PO ID must match format PO-YYYY-NNNN, got: {v}"
+                f"PO ID must match format PO-YYYY-XXXX, got: {v}"
             )
         return v
 
