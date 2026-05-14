@@ -1,5 +1,5 @@
 [project]
-name = "logistics-ops-agent"
+name = "po-anomaly-detection-agent"
 version = "0.1.0"
 description = "Production-grade PO Anomaly Detection Agent using LangGraph"
 readme = "README.md"
